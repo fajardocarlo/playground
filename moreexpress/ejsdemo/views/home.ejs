@@ -1,0 +1,12 @@
+<% include partials/header %>
+<h1> Welcome to the homepage!!! </h1>
+<h5>by Aeon11</h5>
+<% if (userName.toLowerCase() === "aeon"){ %>
+<%   var greeting = " Carlo"; %>
+<h4>Hello <%= greeting %> </h4>
+<% } %>
+<h3>Welcome user: <%= userName.toUpperCase() %> </h3>
+<% include partials/footer %>
+
+
+

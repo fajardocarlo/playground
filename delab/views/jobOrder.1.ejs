@@ -1,0 +1,600 @@
+<% include partials/header %>
+<form class="form" action="/jobOrder" method="POST"> <!-- Form Start -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+    	<h3 class="panel-title">CUSTOMER INFORMATION</h3>
+	</div>
+  	<div class="panel-body">
+	    
+	    	<div class="row">
+	    		<div class="col-xs-4"><!-- customer name -->
+			  		<div class="form-group">
+			    		<label class="customerinfolabel" for="customerName">Customer Name: </label>
+			    		<input type="text" class="form-control" id="customerName" name="customerName">
+			 		</div>
+			 	</div><!-- customer name -->
+			 	<div class="col-xs-4"><!-- deadline -->
+			  		<div class="form-group">
+			    		<label class="customerinfolabel" for="deadline">Deadline: </label>
+			    		<input type="date" class="form-control" id="deadline" name="deadline">
+			  		</div>
+			  	</div><!-- /deadline -->
+		  	</div><!-- /first row -->
+		  	<br>
+		  	<div class="row">
+			 	<div class="col-xs-4">
+			    	<div class="form-group">
+			    		<label class="customerinfolabel" for="schoolCompany">School / Company:  </label>
+			    		<input type="text" class="form-control" id="schoolCompany" name="schoolCompany">
+			 		</div>
+			  	</div><!-- /.col-lg-6 -->
+			  	<div class="col-xs-4"><!-- pickup -->
+			  		<div class="form-group">
+			    		<label class="customerinfolabel" for="pickup">Pick Up: </label>
+			    		<input type="date" class="form-control" id="pickup" name="pickup">
+			  		</div>
+			  	</div> <!-- /pickup -->
+			 </div><!-- /secondrow -->
+			 <br>
+			 <div class="row">
+	    		<div class="col-xs-4">
+			  		<div class="form-group">
+			    		<label class="customerinfolabel" for="contactNumber">Contact Number: </label>
+			    		<input type="text" class="form-control" id="contactNumber" name="contactNumber">
+			 		</div>
+			 	</div>
+			 	<div class="col-xs-4">
+			  		<div class="form-group">
+			    		<label class="customerinfolabel" for="emailAddress">Email Address </label>
+			    		<input type="email" class="form-control" id="emailAddress" name="emailAddress">
+			  		</div>
+			  	</div>
+		  	</div><!-- /third row -->
+		  	<br>
+			 <div class="row">	
+			 	<div class="col-xs-2">	
+			 		<label class="customerinfolabel">How did you find us?:</label>
+    				<div class="input-group">
+      					<span class="input-group-addon">
+        					<input name="howdidyoufindus" value="Facebook" type="radio" aria-label="...">
+      					</span>
+      					<input type="text" class="form-control checkdisabled" value="Facebook" aria-label="..." disabled>
+    				</div><!-- /input-group -->
+    				<div class="input-group">
+      					<span class="input-group-addon">
+        					<input name="howdidyoufindus" value="Instagram" type="radio" aria-label="...">
+      					</span>
+      					<input type="text" class="form-control checkdisabled" value="Instagram" aria-label="..." disabled>
+    				</div><!-- /input-group -->
+    				<div class="input-group">
+      					<span class="input-group-addon">
+        					<input name="howdidyoufindus" type="radio" aria-label="...">
+      					</span>
+      					<input type="text" class="form-control" placeholder="Referred by..." aria-label="...">
+    				</div><!-- /input-group -->
+			 	</div>
+			 </div><!-- /fourth row -->
+  	</div>
+</div><!-- /first panel -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+		<h3 class="panel-title">PROJECT INFORMATION</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">	
+			<div class="col-xs-3 text-center">
+				<label>SCALE</label>
+			</div>
+			<div class="col-xs-9 text-center">
+				<label>NOTES & GUIDELINES</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">
+			<textarea class="form-control" rows="3" cols="100" placeholder="Type scale here..." name="scale"></textarea>
+			</div>
+			<div class="col-xs-9">
+			<textarea class="form-control" rows="3" cols="100" placeholder="type notes and guidelines here..." name="guidelines"></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label class="" for="projectTitle">Project Title: </label>
+			    	<input type="text" class="form-control" id="projectTitle" name="projectTitle">
+			 	</div>
+			</div>
+			<div class="col-xs-1">
+				<div class="form-group">
+	  				<label for="withBase">With base:</label>
+					  	<select class="form-control" id="withBase" name="withBase">
+						    <option value="Yes">Yes</option>
+						    <option value="No">No</option>
+					  	</select>
+				</div>
+			</div>
+			<div class="col-xs-3 pull-right">
+				<div class="form-group">
+					<label class="" for="initialBudget">Initial Budget: </label>
+			    	<input type="number" class="form-control" id="initialBudget" name="initialBudget">
+			 	</div>
+			</div>
+		</div>
+  	</div>
+</div><!-- /second panel -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+		<h3 class="panel-title">PROJECT DOCUMENTATION</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+				<label>Work Type</label>
+			</div>
+			<div class="col-xs-2 text-center">
+				<label>Hours</label>
+			</div>
+			<div class="col-xs-2 text-center">
+				<label>Task Head</label>
+			</div>
+			<div class="col-xs-2 text-center">
+				<label>Person/s in Charge</label>
+			</div>
+			<div class="col-xs-2 text-center">
+				<label>Cost</label>
+			</div>
+		</div>
+		<hr class="style1">
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			  	<label>Modelling</label>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="modellingHours">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="modellingTaskHead">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="modellingPersonInCharge">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="modellingCost">
+			 	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			  	<label>Layout</label>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="layoutHours">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="layoutTaskHead">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="layoutPersonInCharge">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="layoutCost">
+			 	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			    <label>Cutting</label>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="cuttingHours">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="cuttingTaskHead">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="cuttingPersonInCharge">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="cuttingCost">
+			 	</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 text-center">
+			  	<label>Assembly</label>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="assemblyHours">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="assemblyTaskHead">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="assemblyPersonInCharge">
+			 	</div>
+			</div>
+			<div class="col-xs-2">
+			  	<div class="form-group">
+			    	<input type="text" class="form-control" id="CusName" name="assemblyCost">
+			 	</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /third panel -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+		<h3 class="panel-title">MATERIALS</h3>
+	</div>
+	<div class="panel-body">
+			<div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 1.6 mm Clear</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  MDF 2.5 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Balsa Wood Short</label>
+					</div>
+				</div>
+			</div><!-- /row 1 -->
+			<div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 3.0 mm Clear</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  MDF 3.0 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Balsa Wood Long</label>
+					</div>
+				</div>
+			</div><!-- /row 2 -->
+			<div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 6.00 mm Clear</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  MDF 4.0 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Kraft Paper</label>
+					</div>
+				</div>
+			</div><!-- /row 3 -->
+			<div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 9.00 mm Clear</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  MDF 6.0 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Masking Tape</label>
+					</div>
+				</div>
+			</div><!-- /row 4 -->
+			<div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 3.00 mm Frosted</label>
+					</div>
+				</div>
+				<div class="col-xs-4 col-xs-push-4">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Atlas Glue</label>
+					</div>
+				</div><!-- /row 5 -->
+			</div><div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 1.6 mm White</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Chipboard 1.00 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Mighty Bond</label>
+					</div>
+				</div><!-- /row 6 -->
+			</div><div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 3.00 mm White</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Chipboard 3.00 mm</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <label>  Others: </label>
+					</div>
+				</div><!-- /row 7 -->
+			</div><div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 1.6 mm Colored</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Packline</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>---</label>
+					    <input type="text" class="form-control" name="">
+					</div>
+				</div><!-- /row 8 -->
+			</div><div class="row">
+			    <div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+						<input type="text" class="form-control" id="CusName">
+					    <label for="CusName">  Acrylic 3.00 mm Colored</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>  Claycoated</label>
+					</div>
+				</div>
+				<div class="col-xs-4 materialsgroup">
+					<div class="form-group">
+					    <input type="text" class="form-control" id="Deadline">
+					    <label>---</label>
+					    <input type="text" class="form-control" name="">
+					</div>
+				</div><!-- /row 9 -->
+			</div><!-- /first row -->
+	</div>
+</div><!-- /fourth panel -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+		<h3 class="panel-title">CUTTING TIME</h3>
+	</div>
+	<div class="panel-body">
+		<table>
+			<tbody>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+				<tr>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+					<td contenteditable=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<label>Total Time: </label>
+		<input type="text" name="" disabled>
+	</div>
+</div><!-- /5th panel -->
+<div class="panel panel-default">
+	<div class="panel-heading  joborderpanel">
+		<h3 class="panel-title">PROJECT SUMMARY</h3>
+	</div>
+  	<div class="panel-body">
+  		<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Date filled out:</label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Balance: </label>
+	    	</div>
+    	</div>
+    	<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Order taken by:</label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Downpayment: </label>
+	    	</div>
+    	</div>
+    	<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Workshop Membership: </label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Startup fee: </label>
+	    	</div>
+    	</div>
+    	<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Sponsorship: </label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Contract Price:  </label>
+	    	</div>
+    	</div>
+    	<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Rush Project: </label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Date of full payment:  </label>
+	    	</div>
+    	</div>
+    	<div class="row">
+  			<div class="col-xs-6">
+	    		<label>Project Reference Number: </label>
+	    	</div>
+	    	<div class="col-xs-6">
+	    		<label>Receipt Reference Number:  </label>
+	    	</div>
+    	</div>
+    	<div class="col-lg-1 pull-right">
+  			<button class="btn btn-warning btn-lg btn-right">Submit</button>
+  		</div>
+  	</div>
+</div>
+</form>
+<% include partials/footer.ejs %>

@@ -1,0 +1,14 @@
+{
+  "name": "expressexercise",
+  "version": "1.0.0",
+  "description": "simple express exercise",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlo Fajardo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

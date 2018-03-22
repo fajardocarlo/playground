@@ -1,0 +1,15 @@
+<% include partials/header.ejs %>
+<h1 class="text-center">Create new Camp Ground</h1>
+<div class="container">
+    <div class="row">
+        <div class="campform">
+            <form method="POST" action="/campgrounds">
+                <input class="form-control campfield" type="text" placeholder="name" name="campname">
+                <input class="form-control campfield" type="text" placeholder="image url" name="imagesource">
+                <button class="btn btn-lg btn-default">SUBMIT</button>
+            </form>
+            <a href="/campgrounds">Back to campgrounds</a>
+            <% include partials/footer.ejs %>
+        </div>
+    </div>
+</div>

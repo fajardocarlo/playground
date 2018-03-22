@@ -1,0 +1,33 @@
+<% include partials/header %>
+<% data.forEach(function(content){ %>
+    <div class="panel panel-default">
+        <div class="panel-heading"><%= content.customerInformation.customerName %></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>School/Company: <%= content.customerInformation.schoolCompany %></p>
+                </div>
+                <div class="col-xs-6">
+                    <p>Deadline: <%= content.projectInformation.deadline %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>Contact No: <%= content.customerInformation.contactNumber %></p>
+                </div>
+                <div class="col-xs-6">
+                    <p>Email Address: <%= content.customerInformation.emailAddress %></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <p>School/Company: <%= content.customerInformation.schoolCompany %></p>
+                </div>
+                <div class="col-xs-6">
+                    <p>Deadline: <%= content.projectInformation.deadline %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<% }) %>
+<% include partials/footer %>
